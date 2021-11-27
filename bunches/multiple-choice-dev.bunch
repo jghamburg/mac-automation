@@ -1,0 +1,52 @@
+---
+title: 🖥Code like Heaven
+sequence: parallel
+---
+/* Launch all of the necessary apps and tell Bunch to ignore
+   them when closing. */
+%iTerm
+%Sublime Text
+%Spotify
+
+/* Ask me which project I want to work on. If I cancel, no
+   project files will be loaded. */
+?{
+    CreateWffo => <<#CreateWffo
+    MacAutomation => <<#MacAutomation
+} "Whatcha workin' on?"
+
+// Ask if I want to play my Coding Music playlist in Spotify.
+<<#Coding Spotify ?"Play Coding Music?"
+
+// Run a Moom snapshot after everything has loaded
+    <<#Moom
+___
+
+------------------------------------------------------------[CreateWffo]-
+/* Suppress Timing config at the moment
+
+& workflows/Timing
+- task = Marked
+- project = Development
+!& workflows/Timing
+*/
+
+$ subl -p ~/git/cormorant-project.sublime-project
+
+iTerm
+
+-------------------------------------------------------------[MacAutomation]-
+Forklift
+- {~^$b}
+
+$ /usr/local/bin/subl -p ~/git/mac-automation.sublime-project
+
+--------------------------------------------------------------[Moom]-
+
+* tell application "Moom" to arrange windows according to snapshot "Cormorant-Develop"
+
+----------------------------------------------------[Coding Spotify]-
+Spotify
+& workflows/Play Spotify URL
+- URL=spotify:​playlist:37i9dQZF1DX70TzPK5buVf
+- Autoplay=${autoplay:true}

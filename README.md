@@ -23,3 +23,5 @@ Later on I like to add some basic music support by my favorite Rock groups from 
 * [Welcome to Bunch - Bunch.app](https://bunchapp.co/)
 * [Stream Deck Mini | elgato.com](https://www.elgato.com/de/stream-deck-mini)
 * [Bunch and the Stream Deck - BrettTerpstra.com](https://brettterpstra.com/2020/09/16/bunch-and-stream-deck/)
+* [Sample Bunches - Bunch.app](https://bunchapp.co/docs/bunch-files/samplebunch/#multiplechoice)
+* [Bunch and Timing.app - BrettTerpstra.com](https://brettterpstra.com/2019/07/02/bunch-and-timing/)
